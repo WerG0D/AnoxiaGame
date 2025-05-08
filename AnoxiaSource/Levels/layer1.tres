@@ -1,0 +1,38 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cbnffwt8jxdgo"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p412n"]
+polygon = PackedVector2Array(0, -1.07915, -16.0074, 8.81308, 0.179859, 16.9067, 16.7269, 7.37421)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6vdtt"]
+polygon = PackedVector2Array(0, -1.07915, -16.0074, 8.81308, 0.179859, 16.9067, 16.7269, 7.37421)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cujy5"]
+load_path = "res://.godot/imported/iso_tileset.png-a3b89726f42b7459161fa654907a1f00.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qfp55"]
+load_path = "res://.godot/imported/iso_tileset_n.png-067cb529c7b826602e3695a173fe3233.ctex"
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qfp55"]
+diffuse_texture = SubResource("CompressedTexture2D_cujy5")
+normal_texture = SubResource("CompressedTexture2D_qfp55")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p412n"]
+texture = SubResource("CanvasTexture_qfp55")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_p412n")
+2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6vdtt")
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+occlusion_layer_0/light_mask = 1
+sources/1 = SubResource("TileSetAtlasSource_p412n")
