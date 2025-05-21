@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkuw8fr5eg5c5"
-path="res://.godot/imported/lightmask.png-1c63a976edd7a655349a0e4ed3a9516f.ctex"
+uid="uid://bcfouq4ttxw60"
+path="res://.godot/imported/Sprite-0001-removebg-preview.png-0dab5f1a371828b531680d5b0a17368f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lightmask.png"
-dest_files=["res://.godot/imported/lightmask.png-1c63a976edd7a655349a0e4ed3a9516f.ctex"]
+source_file="res://Sprite-0001-removebg-preview.png"
+dest_files=["res://.godot/imported/Sprite-0001-removebg-preview.png-0dab5f1a371828b531680d5b0a17368f.ctex"]
 
 [params]
 
