@@ -1,0 +1,191 @@
+[gd_scene load_steps=17 format=4 uid="uid://bnxg0okttl7ey"]
+
+[ext_resource type="Texture2D" uid="uid://mrcnfjuhaucf" path="res://Areninha.png" id="1_vfh1f"]
+[ext_resource type="Texture2D" uid="uid://bsolyyvpffqgh" path="res://Test Stuff/iso_tileset.png" id="2_pejli"]
+[ext_resource type="Script" uid="uid://31bpgdn2nvei" path="res://Test Stuff/lamp_mov.gd" id="3_vfh1f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jppl5"]
+texture = ExtResource("2_pejli")
+texture_region_size = Vector2i(32, 32)
+1:0/next_alternative_id = 3
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 8)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 8)
+2:0/next_alternative_id = 3
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 8)
+3:0/next_alternative_id = 2
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 8)
+4:0/next_alternative_id = 2
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, 8)
+5:0/next_alternative_id = 2
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, 8)
+6:0/next_alternative_id = 2
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, 8)
+
+[sub_resource type="TileSet" id="TileSet_xijaa"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_jppl5")
+
+[sub_resource type="Gradient" id="Gradient_pejli"]
+colors = PackedColorArray(0.95614, 0.95614, 0.95614, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ktpjn"]
+gradient = SubResource("Gradient_pejli")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pejli"]
+polygon = PackedVector2Array(-80, 0, -96, 8, -32, 40, -16, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ktpjn"]
+polygon = PackedVector2Array(48, 16, 64, 24, 48, 32, 32, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jppl5"]
+polygon = PackedVector2Array(48, 16, 64, 24, 48, 32, 32, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xijaa"]
+polygon = PackedVector2Array(48, 16, 64, 24, 48, 32, 32, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pmrau"]
+polygon = PackedVector2Array(48, 16, 64, 24, 48, 32, 32, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4lrl4"]
+cull_mode = 1
+polygon = PackedVector2Array(0, 0, 16, -8, 32, 0, 16, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f78u1"]
+polygon = PackedVector2Array(32, 8, 48, 0, 64, 8, 48, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g2hl5"]
+polygon = PackedVector2Array(32, 8, 48, 0, 64, 8, 48, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1ss1v"]
+polygon = PackedVector2Array(-96, -8, -80, -16, -15, 16, -32, 24)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+position = Vector2(-26, 7)
+texture = ExtResource("1_vfh1f")
+
+[node name="Entidades" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Entidades"]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD9/wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAD7/wAAAAAAAAAAAAD9//7/AAAAAAAAAAAAAP7/AAAAAAAAAAACAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_xijaa")
+
+[node name="Lamp" type="Node2D" parent="Entidades/TileMapLayer"]
+light_mask = 3
+visibility_layer = 3
+script = ExtResource("3_vfh1f")
+
+[node name="Shado" type="PointLight2D" parent="Entidades/TileMapLayer/Lamp"]
+light_mask = 3
+visibility_layer = 3
+z_as_relative = false
+position = Vector2(-26, -19)
+scale = Vector2(2, 2)
+range_layer_max = 2
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_ktpjn")
+
+[node name="Light" type="PointLight2D" parent="Entidades/TileMapLayer/Lamp"]
+position = Vector2(-26, -19)
+scale = Vector2(2, 2)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ktpjn")
+
+[node name="ShadoLight T2" type="Node2D" parent="Entidades/TileMapLayer"]
+light_mask = 2
+visibility_layer = 2
+
+[node name="LightOccluder2" type="LightOccluder2D" parent="Entidades/TileMapLayer/ShadoLight T2"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+z_as_relative = false
+occluder = SubResource("OccluderPolygon2D_pejli")
+occluder_light_mask = 2
+
+[node name="g" type="LightOccluder2D" parent="Entidades/TileMapLayer/ShadoLight T2"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+z_as_relative = false
+occluder = SubResource("OccluderPolygon2D_ktpjn")
+occluder_light_mask = 2
+
+[node name="g2" type="LightOccluder2D" parent="Entidades/TileMapLayer/ShadoLight T2"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+z_as_relative = false
+position = Vector2(0, -32)
+occluder = SubResource("OccluderPolygon2D_jppl5")
+occluder_light_mask = 2
+
+[node name="g3" type="LightOccluder2D" parent="Entidades/TileMapLayer/ShadoLight T2"]
+light_mask = 2
+visibility_layer = 2
+z_as_relative = false
+position = Vector2(-48, -56)
+occluder = SubResource("OccluderPolygon2D_xijaa")
+occluder_light_mask = 2
+
+[node name="g4" type="LightOccluder2D" parent="Entidades/TileMapLayer/ShadoLight T2"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+z_as_relative = false
+position = Vector2(-112, -56)
+occluder = SubResource("OccluderPolygon2D_pmrau")
+occluder_light_mask = 2
+
+[node name="TileLight T" type="Node2D" parent="Entidades/TileMapLayer"]
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Entidades/TileMapLayer/TileLight T"]
+z_index = 1
+position = Vector2(-80, -48)
+occluder = SubResource("OccluderPolygon2D_4lrl4")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Entidades/TileMapLayer/TileLight T"]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+position = Vector2(-48, -56)
+occluder = SubResource("OccluderPolygon2D_f78u1")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Entidades/TileMapLayer/TileLight T"]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+position = Vector2(0, -32)
+occluder = SubResource("OccluderPolygon2D_g2hl5")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Entidades/TileMapLayer/TileLight T"]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+occluder = SubResource("OccluderPolygon2D_f78u1")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Entidades/TileMapLayer/TileLight T"]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+occluder = SubResource("OccluderPolygon2D_1ss1v")
