@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://bxm1e6er0rgmn"]
+[gd_scene load_steps=16 format=4 uid="uid://bxm1e6er0rgmn"]
 
 [ext_resource type="Texture2D" uid="uid://d3gk2u613fs5w" path="res://iso_tileset.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://cm1lvvnfi7h0g" path="res://point_light_2d.gd" id="2_0e48y"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_epypp"]
 diffuse_texture = ExtResource("1_wtcfe")
@@ -48,14 +49,15 @@ tile_layout = 5
 tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
-[sub_resource type="Gradient" id="Gradient_wtcfe"]
-offsets = PackedFloat32Array(0, 0.5)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q6r6c"]
+polygon = PackedVector2Array(-72, -1, -104, -18, -104, 0, -72, 16)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0e48y"]
-gradient = SubResource("Gradient_wtcfe")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0e48y"]
+polygon = PackedVector2Array(8, -41, -72, -2, -72, 16, 8, -25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kdubu"]
+cull_mode = 1
+polygon = PackedVector2Array(0, -49, -82, -8, -48, 9, 32, -32)
 
 [sub_resource type="Gradient" id="Gradient_epypp"]
 offsets = PackedFloat32Array(0, 0.5)
@@ -66,12 +68,14 @@ gradient = SubResource("Gradient_epypp")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q6r6c"]
-polygon = PackedVector2Array(-72, -1, -104, -18, -104, 0, -72, 16, 8, -24, 8, -42)
+[sub_resource type="Gradient" id="Gradient_wtcfe"]
+offsets = PackedFloat32Array(0, 0.5)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kdubu"]
-cull_mode = 1
-polygon = PackedVector2Array(0, -49, -82, -8, -48, 9, 32, -32)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0e48y"]
+gradient = SubResource("Gradient_wtcfe")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -84,18 +88,6 @@ tile_set = SubResource("TileSet_epypp")
 tile_map_data = PackedByteArray("AAD9/wIAAAABAAAAAAD9/wEAAAABAAAAAAD9/wAAAAABAAAAAAD9////AAABAAAAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD+////AAABAAAAAAD+/wAAAAABAAAAAAD+/wEAAAABAAAAAAD+/wIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_0hol4")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(41, -17)
-energy = 3.0
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_0e48y")
-
-[node name="PointLight2D2" type="PointLight2D" parent="PointLight2D"]
-energy = 2.0
-shadow_enabled = true
-shadow_item_cull_mask = 2
-texture = SubResource("GradientTexture2D_0hol4")
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.10748, 0.10748, 0.10748, 1)
 
@@ -104,6 +96,11 @@ z_index = 1
 position = Vector2(24, 9)
 occluder = SubResource("OccluderPolygon2D_q6r6c")
 
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+z_index = 1
+position = Vector2(24, 9)
+occluder = SubResource("OccluderPolygon2D_0e48y")
+
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_kdubu")
 occluder_light_mask = 2
@@ -111,3 +108,17 @@ occluder_light_mask = 2
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(31, -12)
 zoom = Vector2(5.265, 5.265)
+
+[node name="Lights" type="Node2D" parent="."]
+script = ExtResource("2_0e48y")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights"]
+energy = 2.0
+shadow_enabled = true
+shadow_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_0hol4")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights"]
+energy = 3.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_0e48y")
