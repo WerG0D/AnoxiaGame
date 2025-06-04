@@ -1,0 +1,211 @@
+[gd_scene load_steps=16 format=4 uid="uid://h8gx2ey6hgea"]
+
+[ext_resource type="Texture2D" uid="uid://c11nib20vkias" path="res://Assets/Isometric_MedievalFantasy_Tiles.png" id="1_lwy2l"]
+[ext_resource type="Script" uid="uid://tgnhw3i3nn1h" path="res://Entities/player.gd" id="2_nj2yk"]
+[ext_resource type="Texture2D" uid="uid://dycukkibyiwtd" path="res://Assets/IsometricTRPGAssetPack_Entities.png" id="3_7pswh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34bfm"]
+texture = ExtResource("1_lwy2l")
+separation = Vector2i(0, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ovrsl"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(16, 8)
+sources/0 = SubResource("TileSetAtlasSource_34bfm")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbaan"]
+radius = 4.0
+height = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5fp"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u05pv"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mykqc"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hilkn"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mxy1"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(0, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lhg3"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(16, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgfyn"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(32, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uk0a"]
+atlas = ExtResource("3_7pswh")
+region = Rect2(48, 17, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ouevp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u05pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mykqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hilkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mxy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lhg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgfyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uk0a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAP7/AAAAAAAAAAAGAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAABAAAAAAADAP3/AAABAAAAAAADAP7/AAABAAAAAAACAP7/AAABAAAAAAACAP//AAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAIAP7/AAABAAAAAAAJAP7/AAABAAAAAAAJAP3/AAABAAAAAAAIAP3/AAABAAAAAAAJAPz/AAABAAAAAAAJAPv/AAABAAAAAAAJAPr/AAABAAAAAAAFAPz/AAABAAAAAAAFAPv/AAABAAAAAAAFAPr/AAABAAAAAAAGAPr/AAABAAAAAAAHAPr/AAABAAAAAAAIAPr/AAABAAAAAAAEAPz/AAABAAAAAAAKAPr/AAAEAAAAAAALAPn/AAAEAAAAAAAMAPj/AAAEAAAAAAALAPj/AAAEAAAAAAAKAPn/AAAEAAAAAAACAAIAAAABAAAAAAABAAIAAAABAAAAAAABAAMAAAABAAAAAAABAAQAAAABAAAAAAACAAQAAAABAAAAAAADAAQAAAABAAAAAAAEAAQAAAABAAAAAAAEAAMAAAABAAAAAAADAAMAAAABAAAAAAACAAMAAAABAAAAAAADAAIAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAFAAMAAAABAAAAAAAGAAMAAAABAAAAAAAGAAIAAAABAAAAAAAHAAIAAAABAAAAAAAFAAQAAAABAAAAAAAGAAQAAAABAAAAAAAHAAQAAAABAAAAAAAHAAMAAAABAAAAAAAIAAMAAAABAAAAAAAIAAIAAAABAAAAAAAHAAEAAAABAAAAAAAIAAEAAAABAAAAAAAJAAEAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAAKAP//AAABAAAAAAAJAP//AAABAAAAAAAIAAAAAAABAAAAAAAJAAIAAAABAAAAAAAIAAQAAAABAAAAAAAJAAQAAAABAAAAAAAJAAMAAAABAAAAAAAKAAIAAAABAAAAAAAKAAEAAAABAAAAAAALAAEAAAABAAAAAAALAAAAAAABAAAAAAALAP//AAABAAAAAAALAP7/AAABAAAAAAAMAP7/AAABAAAAAAANAP7/AAABAAAAAAANAP3/AAABAAAAAAAMAP3/AAABAAAAAAALAP3/AAABAAAAAAAKAP3/AAABAAAAAAAKAP7/AAABAAAAAAAKAPz/AAABAAAAAAALAPz/AAABAAAAAAAMAPz/AAABAAAAAAAMAPv/AAABAAAAAAANAPv/AAABAAAAAAAOAPv/AAABAAAAAAAOAPr/AAABAAAAAAANAPr/AAABAAAAAAANAPn/AAABAAAAAAAMAPr/AAABAAAAAAAOAPz/AAABAAAAAAAOAP3/AAABAAAAAAANAPz/AAABAAAAAAANAP//AAABAAAAAAANAAAAAAABAAAAAAAMAAAAAAABAAAAAAAMAP//AAABAAAAAAA=")
+tile_set = SubResource("TileSet_ovrsl")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_nj2yk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_hbaan")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_ouevp")
+frame_progress = 0.183702
