@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkf4m3k0d5lfl"
-path="res://.godot/imported/TRPGIsometricAssetPack_MapIndicators.png-42a535d13ba09d5429052660e07eb29c.ctex"
+path="res://.godot/imported/TRPGIsometricAssetPack_MapIndicators.png-6de630245a2bcd3ffd23072a1f310584.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TRPGIsometricAssetPack_MapIndicators.png"
-dest_files=["res://.godot/imported/TRPGIsometricAssetPack_MapIndicators.png-42a535d13ba09d5429052660e07eb29c.ctex"]
+source_file="res://assets/TRPGIsometricAssetPack_MapIndicators.png"
+dest_files=["res://.godot/imported/TRPGIsometricAssetPack_MapIndicators.png-6de630245a2bcd3ffd23072a1f310584.ctex"]
 
 [params]
 

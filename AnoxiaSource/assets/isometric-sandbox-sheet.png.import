@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tag7lulcn4w4"
-path="res://.godot/imported/IsometricTRPGAssetPack_OutlinedEntities.png-56ff03d6fd8cb03dff2b405ee53439ae.ctex"
+uid="uid://cte71eq1raxre"
+path="res://.godot/imported/isometric-sandbox-sheet.png-729035aa93b71847ff77061f576a2fc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/IsometricTRPGAssetPack_OutlinedEntities.png"
-dest_files=["res://.godot/imported/IsometricTRPGAssetPack_OutlinedEntities.png-56ff03d6fd8cb03dff2b405ee53439ae.ctex"]
+source_file="res://assets/isometric-sandbox-sheet.png"
+dest_files=["res://.godot/imported/isometric-sandbox-sheet.png-729035aa93b71847ff77061f576a2fc2.ctex"]
 
 [params]
 
