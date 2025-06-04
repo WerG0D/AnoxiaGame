@@ -6,6 +6,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="TileMaps" parent="." instance=ExtResource("1_gnif3")]
+position = Vector2(19, -8)
 
 [node name="Player" parent="TileMaps" instance=ExtResource("3_lwy2l")]
 z_index = 1

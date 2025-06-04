@@ -1,5 +1,5 @@
 extends Node2D
-
+@export var rotation_plus: float = 5
 @export var move_speed: float = 100.0
 @export var arrival_threshold: float = 1.0 
 
@@ -41,8 +41,13 @@ func _unhandled_input(event: InputEvent) -> void:
 					_advance_to_next_target()
 			else:
 				print("Path was empty, movement cancelled")
-			
-
+	if event.is_action(&"r"):
+		rotation = rotation + deg_to_rad(rotation_plus)
+		
+	if event.is_action(&"e"):
+		rotation = rotation - deg_to_rad(rotation_plus)
+		
+	
 func _process(delta: float) -> void:
 	pass
 
