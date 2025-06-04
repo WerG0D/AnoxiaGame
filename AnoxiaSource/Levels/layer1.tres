@@ -7,10 +7,8 @@ polygon = PackedVector2Array(0, -1.07915, -16.0074, 8.81308, 0.179859, 16.9067, 
 polygon = PackedVector2Array(0, -1.07915, -16.0074, 8.81308, 0.179859, 16.9067, 16.7269, 7.37421)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cujy5"]
-load_path = "res://.godot/imported/iso_tileset.png-a3b89726f42b7459161fa654907a1f00.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qfp55"]
-load_path = "res://.godot/imported/iso_tileset_n.png-067cb529c7b826602e3695a173fe3233.ctex"
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qfp55"]
 diffuse_texture = SubResource("CompressedTexture2D_cujy5")

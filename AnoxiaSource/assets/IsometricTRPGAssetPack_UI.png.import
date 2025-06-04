@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drwh04orc72ng"
-path="res://.godot/imported/IsometricTRPGAssetPack_UI.png-56e26b8701a7b6160ec505fdec4a1de0.ctex"
+path="res://.godot/imported/IsometricTRPGAssetPack_UI.png-ebd12e26b9a46af9f7d84b751710c683.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/IsometricTRPGAssetPack_UI.png"
-dest_files=["res://.godot/imported/IsometricTRPGAssetPack_UI.png-56e26b8701a7b6160ec505fdec4a1de0.ctex"]
+source_file="res://assets/IsometricTRPGAssetPack_UI.png"
+dest_files=["res://.godot/imported/IsometricTRPGAssetPack_UI.png-ebd12e26b9a46af9f7d84b751710c683.ctex"]
 
 [params]
 

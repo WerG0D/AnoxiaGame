@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbbi8xtydyxrp"
-path="res://.godot/imported/lightmask-removebg-preview.png-8c085407c469b17ce0a3c30c96b64d2b.ctex"
+path="res://.godot/imported/lightmask-removebg-preview.png-52accaf7a085439fc1065444e7998352.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lightmask-removebg-preview.png"
-dest_files=["res://.godot/imported/lightmask-removebg-preview.png-8c085407c469b17ce0a3c30c96b64d2b.ctex"]
+source_file="res://assets/lightmask-removebg-preview.png"
+dest_files=["res://.godot/imported/lightmask-removebg-preview.png-52accaf7a085439fc1065444e7998352.ctex"]
 
 [params]
 
